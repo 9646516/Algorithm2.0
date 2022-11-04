@@ -1,7 +1,6 @@
 struct undirected_graph {
     int n;
     vector<pair<int, int>> edge;
-    vector<int> deg;
     vector<vector<int>> dcc;
     stack<int> s;
     int times;
@@ -22,8 +21,6 @@ struct undirected_graph {
     }
     void addedge(int x, int y) {
         edge.push_back({x, y});
-        deg[x]++;
-        deg[y]++;
     }
 
     void tarjan(int x, int pre, int root) {
