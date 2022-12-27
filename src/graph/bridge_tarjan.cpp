@@ -19,8 +19,8 @@ struct undirected_graph {
         cutpoints = vector<int>(n + 1);
     }
     void addedge(int x, int y) {
-        assert(x >= 1 && x<= n);
-        assert(y >= 1 && y<= n);
+        assert(x >= 1 && x <= n);
+        assert(y >= 1 && y <= n);
         edge.push_back({x, y});
     }
 
